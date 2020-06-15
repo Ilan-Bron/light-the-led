@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+
+        android:id="@+id/settings_text_view_port_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="port number"
+        app:layout_constraintEnd_toEndOf="@+id/Settings_text_view_ip_adress"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/Settings_text_view_ip_adress"
+        app:layout_constraintTop_toBottomOf="@+id/Settings_text_view_ip_adress" />
+
+    <TextView
+
+        android:id="@+id/Settings_text_view_ip_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="IP adress"
+        app:layout_constraintEnd_toStartOf="@+id/Settings_edit_text_ip_adress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/Settings_edit_text_ip_adress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="IP"
+        android:inputType="number"
+        android:digits="0123456789."
+        app:layout_constraintBottom_toBottomOf="@+id/Settings_text_view_ip_adress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Settings_text_view_ip_adress" />
+
+
+    <EditText
+        android:id="@+id/settings_edit_text_port_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="port number"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_text_view_port_num"
+        app:layout_constraintEnd_toEndOf="@+id/Settings_edit_text_ip_adress"
+        app:layout_constraintTop_toTopOf="@+id/settings_text_view_port_num" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:onClick="save_and_return_to_prev_activity"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/settings_pic"
+        />
+
+    <Switch
+        android:id="@+id/mute_sound_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="Mute"
+        app:layout_constraintEnd_toEndOf="@+id/settings_edit_text_port_num"
+        app:layout_constraintStart_toStartOf="@+id/settings_text_view_port_num"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_view_port_num" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
